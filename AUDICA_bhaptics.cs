@@ -31,5 +31,48 @@ namespace AUDICA_bhaptics
                 tactsuitVr.Recoil("Pistol", isRight);
             }
         }
+
+        [HarmonyPatch(typeof(MeleeWeapon), "OnMeleeAttackSuccess", new Type[] { typeof(Target), typeof(Vector3) })]
+        public class bhaptics_MeleeSuccess
+        {
+            [HarmonyPostfix]
+            public static void Postfix(MeleeWeapon __instance)
+            {
+                tactsuitVr.PlaybackHaptics("MeleeCrash");
+            }
+        }
+
+        [HarmonyPatch(typeof(Gun), "OnMeleeAttackSuccess", new Type[] { typeof(Target), typeof(Vector3) })]
+        public class bhaptics_GunMelee
+        {
+            [HarmonyPostfix]
+            public static void Postfix(Gun __instance)
+            {
+                bool isRight = (__instance.hand == Target.TargetHandType.Right);
+                tactsuitVr.Recoil("Melee", isRight);
+            }
+        }
+
+        [HarmonyPatch(typeof(Gun), "UpdateSustainFX", new Type[] { })]
+        public class bhaptics_GunSustainFX
+        {
+            [HarmonyPostfix]
+            public static void Postfix(Gun __instance)
+            {
+                bool isRight = (__instance.hand == Target.TargetHandType.Right);
+                if (!__instance.mSustainFlarePlaying) { tactsuitVr.StopTelekinesis(isRight); return; }
+                tactsuitVr.StartTelekinesis(isRight);
+            }
+        }
+
+        [HarmonyPatch(typeof(FinishLineEffect), "Go", new Type[] { typeof(Vector3), typeof(bool) })]
+        public class bhaptics_FinishLine
+        {
+            [HarmonyPostfix]
+            public static void Postfix()
+            {
+                tactsuitVr.PlaybackHaptics("Healing");
+            }
+        }
     }
 }

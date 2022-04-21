@@ -42,8 +42,9 @@ namespace MyBhapticsTactsuit
             {
                 // Check if reset event is active
                 TelKinL_mrse.WaitOne();
-                bHaptics.SubmitRegistered("TelekinesisArm_L");
-                bHaptics.SubmitRegistered("TelekinesisHand_L");
+                bHaptics.SubmitRegistered("SustainVest_L");
+                bHaptics.SubmitRegistered("SustainArm_L");
+                bHaptics.SubmitRegistered("SustainHand_L");
                 Thread.Sleep(1020);
             }
         }
@@ -54,8 +55,9 @@ namespace MyBhapticsTactsuit
             {
                 // Check if reset event is active
                 TelKinR_mrse.WaitOne();
-                bHaptics.SubmitRegistered("TelekinesisArm_R");
-                bHaptics.SubmitRegistered("TelekinesisHand_R");
+                bHaptics.SubmitRegistered("SustainVest_R");
+                bHaptics.SubmitRegistered("SustainArm_R");
+                bHaptics.SubmitRegistered("SustainHand_R");
                 Thread.Sleep(1020);
             }
         }
@@ -286,14 +288,16 @@ namespace MyBhapticsTactsuit
             if (isRight)
             {
                 TelKinR_mrse.Reset();
-                StopHapticFeedback("TelekinesisArm_R");
-                StopHapticFeedback("TelekinesisHand_R");
+                StopHapticFeedback("SustainVest_R");
+                StopHapticFeedback("SustainArm_R");
+                StopHapticFeedback("SustainHand_R");
             }
             else
             {
                 TelKinL_mrse.Reset();
-                StopHapticFeedback("TelekinesisArm_L");
-                StopHapticFeedback("TelekinesisHand_L");
+                StopHapticFeedback("SustainVest_L");
+                StopHapticFeedback("SustainArm_L");
+                StopHapticFeedback("SustainHand_L");
             }
         }
 
