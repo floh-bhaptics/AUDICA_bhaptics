@@ -23,7 +23,7 @@ using MelonLoader;
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
 [assembly: Guid("c34c4137-4d5c-4817-8686-c49b708b4c96")]
 
-[assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "1.0.0", "Florian Fahrenberger")]
+[assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "1.1.0", "Florian Fahrenberger")]
 [assembly: MelonGame("Harmonix Music Systems, Inc.", "Audica")]
 
 
@@ -37,5 +37,5 @@ using MelonLoader;
 // Sie können alle Werte angeben oder Standardwerte für die Build- und Revisionsnummern verwenden,
 // indem Sie "*" wie unten gezeigt eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0")]
-[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: AssemblyVersion("1.1.0")]
+[assembly: AssemblyFileVersion("1.1.0")]
