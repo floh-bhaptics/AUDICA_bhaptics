@@ -9,7 +9,7 @@ using UnityEngine;
 using MyBhapticsTactsuit;
 using Il2Cpp;
 
-[assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "1.1.0", "Florian Fahrenberger")]
+[assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "2.0.0", "Florian Fahrenberger")]
 [assembly: MelonGame("Harmonix Music Systems, Inc.", "Audica")]
 
 namespace AUDICA_bhaptics
