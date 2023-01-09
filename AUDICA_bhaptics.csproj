@@ -18,10 +18,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>F:\SteamLibrary\steamapps\common\Vox Machinae\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="0Harmony">
       <HintPath>F:\SteamLibrary\steamapps\common\Vox Machinae\MelonLoader\net6\0Harmony.dll</HintPath>
       <Private>False</Private>

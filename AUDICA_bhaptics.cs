@@ -7,6 +7,7 @@ using MelonLoader;
 using HarmonyLib;
 using UnityEngine;
 using MyBhapticsTactsuit;
+using Il2Cpp;
 
 [assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "1.1.0", "Florian Fahrenberger")]
 [assembly: MelonGame("Harmonix Music Systems, Inc.", "Audica")]
@@ -15,11 +16,10 @@ namespace AUDICA_bhaptics
 {
     public class AUDICA_bhaptics : MelonMod
     {
-        public static TactsuitVR tactsuitVr;
+        public static TactsuitVR tactsuitVr = null!;
 
-        public override void OnApplicationStart()
+        public override void OnInitializeMelon()
         {
-            base.OnApplicationStart();
             tactsuitVr = new TactsuitVR();
             tactsuitVr.PlaybackHaptics("HeartBeat");
         }
