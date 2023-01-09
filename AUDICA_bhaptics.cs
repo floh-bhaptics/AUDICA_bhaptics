@@ -8,6 +8,9 @@ using HarmonyLib;
 using UnityEngine;
 using MyBhapticsTactsuit;
 
+[assembly: MelonInfo(typeof(AUDICA_bhaptics.AUDICA_bhaptics), "AUDICA_bhaptics", "1.1.0", "Florian Fahrenberger")]
+[assembly: MelonGame("Harmonix Music Systems, Inc.", "Audica")]
+
 namespace AUDICA_bhaptics
 {
     public class AUDICA_bhaptics : MelonMod
